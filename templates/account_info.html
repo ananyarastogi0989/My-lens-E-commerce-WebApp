@@ -1,0 +1,938 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyeglasses, Sunglasses, Contact Lenses</title>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<!-- css -->
+<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+<!-- js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <!--css file-->
+  <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+  <!-- ===== Link Swiper's CSS ===== -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- ===== Fontawesome CDN Link ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!--pop up -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <!--js file-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <!--icons-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!--swiper-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!--icon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<!--for icons-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!--for icons close-->
+  <style>
+
+
+.header {
+      background-color: #fff; /* Change background color to white */
+      color: #333; /* Change text color */
+      padding: 2px 6px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      /*box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+    }
+
+     /*header */
+    /*search bar open*/
+.search-container {
+      position: relative;
+    }
+
+    #searchInput {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .options-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      z-index: 1;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: none;
+      width:100%;
+    }
+
+    .options-list li {
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .options-list li:hover {
+      background-color: #f0f0f0;
+    }
+
+    /*search bar close*/
+  /*header close*/
+
+
+
+
+
+
+
+
+
+
+    /*flip card 1 start */
+    .flip-card {
+      background-color: transparent;
+      width: 14rem;
+      height: 8rem;
+      border: 1px solid #f1f1f1;
+      perspective: 1000px;
+      /* Remove this if you don't want the 3D effect */
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+      background-color: rgb(216, 60, 255);
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    /* flip card 1 ends*/
+
+    #a3 {
+      font-family: Bahnschrift Light Condensed;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #a3:before,
+    #a3:after {
+      background-color: grey;
+      font-family: LKFuturaStd-Medium;
+      letter-spacing: 0.5px;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    #a3:before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+
+    #a3:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+
+    /*  */
+    #section {
+      position: relative;
+      height: 250px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper {
+      width: 950px;
+    }
+
+    .card {
+      position: relative;
+      background: #fff;
+      border-radius: 20px;
+      margin: 20px 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+    .card .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      position: relative;
+      z-index: 100;
+    }
+
+
+
+    #section .card .image img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+    }
+
+    #card .media-icons {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #card .media-icons i {
+      color: #fff;
+      opacity: 0.6;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    #card .media-icons i:hover {
+      opacity: 1;
+    }
+
+    #card .name-profession {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+      color: ;
+    }
+
+    .name-profession .name {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .name-profession .profession {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    #card .rating {
+      display: flex;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    #card .rating i {
+      font-size: 18px;
+      margin: 0 2px;
+      color: #7d2ae8;
+    }
+
+    #card .button {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    #card .button button {
+      background: #7d2ae8;
+      outline: none;
+      border: none;
+      color: #fff;
+      padding: 8px 22px;
+      border-radius: 20px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .button button:hover {
+      background: #d016ab;
+    }
+
+    .swiper-pagination {
+      position: absolute;
+    }
+
+    .swiper-pagination-bullet {
+      height: 7px;
+      width: 26px;
+      border-radius: 25px;
+      background: #e82a d2;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      opacity: 0.7;
+      color: #e82ab5;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      opacity: 1;
+      color: #e82abc;
+    }
+
+    /*hover effect open*/
+    .A {
+      padding-top: 0%;
+      height: 165px;
+      width: 210px;
+      background-color: white;
+      transition: 0s;
+    }
+
+    .A:hover {
+      background-color: white;
+      height: 450px;
+    }
+
+    #B {
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-right: 10px;
+      height: 120px;
+      width: 200px;
+    }
+
+    .ab:hover::after {
+      color: black;
+    }
+
+    .p1 {
+      display: none;
+    }
+
+    .ab:hover .p1 {
+      display: block;
+    }
+
+    /*hover effect close*/
+    /*hover effect for upper range*/
+    .hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+/*hover effect close for upper range*/
+
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <header class="header">
+
+      <div class="row">
+          <div class="header" id="myHeader">
+            <div class="row">
+              <div class="col-sm-10">
+                <a href="../do_more_be_more2/" style="font-size: 14px;text-decoration: none;color:black;">Explore & Elevate |</a>
+                <a href="../tryon/" style="font-size: 14px;text-decoration: none;color:black;">LensTry-In |</a>
+                <a href="../john_jacobs_nav/" style="font-size: 14px;text-decoration: none;color:black;">John Jacobs |</a>
+                <a href="../aqua_lens/" style="font-size: 14px;text-decoration: none;color:black;">Aqualens </a>
+
+              </div>
+            </div>
+
+            <div class="row">
+             <div class="col">
+                <a style="text-decoration:none;"><p style="margin-top: 20px;font-weight:bolder;font-size:26px;color:#000042;font-family:Georgia, 'Times New Roman', Times, serif ;padding-left: 25px;">MyLens</p></a>
+              </div>
+              <div class="col-sm-5 mt-4">
+                <div class="search-container">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="What are you looking for?"
+                  aria-label="Search">
+                  <ul class="options-list" id="optionsList">
+                    <li style="font-size:x-large">Trending Search</li>
+                    <a href="search_eyeglass.html" style="text-decoration: none;color:black;"><li>Eyeglasses</li></a>
+                    <a href="search_sunglass.html" style="text-decoration: none;color:black;"><li>Sunglasses</li></a>
+                    <a href="search_contact.html" style="text-decoration: none;color:black;"><li>Contact Lenses</li></a>
+                    <a href="search_vinchent.html" style="text-decoration: none;color:black;"><li>Vincent Chase Eyeglasses</li></a>
+                    <a href="men_sun.html" style="text-decoration: none;color:black;"><li>John Jacobs Eyeglasses</li></a>
+                  </ul>
+                </div>
+              </div>
+              <script>
+                var searchInput = document.getElementById('searchInput');
+                var optionsList = document.getElementById('optionsList');
+
+                // Show/hide options list when search bar is clicked
+                searchInput.addEventListener('click', function(event) {
+                  event.stopPropagation(); // Prevent the click event from propagating to the document body
+                  optionsList.style.display = 'block';
+                });
+
+                // Hide options list when clicking outside the search bar
+                document.body.addEventListener('click', function() {
+                  optionsList.style.display = 'none';
+                });
+
+                // Prevent the click inside the search container from closing the options list
+                document.querySelector('.search-container').addEventListener('click', function(event) {
+                  event.stopPropagation();
+                });
+
+                // Handle option selection
+                optionsList.addEventListener('click', function(event) {
+                  if (event.target.tagName === 'LI') {
+                    searchInput.value = event.target.innerText;
+                    optionsList.style.display = 'none';
+                  }
+                });
+              </script>
+              <div class="col-sm-5 mt-3">
+                <div class="row">
+
+                  <div class="col">
+                      <a  style="text-decoration: none;color:black;font-size: 14px;"   data-bs-toggle="modal">Sign In </a>
+                  </div>
+                  <div class="col">
+                    <a class="dropdown-toggle"  style="text-decoration: none;color:black;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>{{results.fname}}</b>
+                      </a>
+
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../account_info/"style="font-size:14px;">Account Information</a></li>
+                        <li><a class="dropdown-item" href="../"style="font-size:14px;">Logout</a></li>
+                      </ul>
+                  </div>
+                  <div class="col">
+                      <a href=""  id="wishlistButton" style="text-decoration: none;color:black;font-size: 14px;"><ion-icon name="heart-outline"></ion-icon>Wishlist</a>
+                  </div>
+                  <div class="col">
+                      <a href="../cartt/" style="text-decoration: none;color:black;font-size: 14px;"><ion-icon name="cart-outline"></ion-icon> Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+             <div class="row">
+              <div class="col-sm-8"style="background:whitesmoke;">
+               <a  style="text-decoration: none;color:black;font-size: 16px;padding:0%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">EYEGLASSES</a>
+
+                <a
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">COMPUTER
+                  GLASSES</a>
+                <a
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">KIDS
+                  GLASSES</a>
+                <a
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">CONTACT
+                  LENSES</a>
+                <a
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">SUNGLASSES</a>
+              </div>
+
+              <div class="col"style="background:whitesmoke;">
+                <a href="" class="btn btn-md"
+                  style="background-color:#20B2AA; margin:0px 4px 0px 0px; display:block; text-size-adjust:100%; border-radius:4px; min-width: 100px;">3DTRYON</a>
+              </div>
+              <div class="col"style="background:whitesmoke;">
+                <a href="../blu_button/" class="btn btn-md"
+                  style="background-color:lightblue;margin:0px 4px 0px 0px; display:block; text-size-adjust:100%; border-radius:4px; min-width: 100px;">BLU</a>
+              </div>
+            </div>
+          </div>
+      </div>
+  </header>
+  <!--header close-->
+
+        <br><br>
+
+
+        <div class="container">
+            <div class="content" id="content">
+              <form action="../accountcode/" method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                <div class="mb-3">
+                    <h2>Edit Account Information</h2><br>
+                    <p style="font-size: 24px;">Account Information</p>
+
+                    <div class="row">
+<!--                        <div class="mb-3">-->
+<!--                            <label for="emaill">Select Category</label>-->
+<!--                            <select id="emaill" name="emaill">-->
+
+<!--                                <option value="{{results.id}}">{{results.email}}</option>-->
+
+<!--                            </select>-->
+<!--                        </div>-->
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="mb-3">
+                                    <label for="firstname">First Name</label>
+                                    <input id="firstname" value="{{ results.fname }}" name="firstname" type="text" class="form-control" placeholder="First Name">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="mb-3">
+                                    <label for="lastname">Last Name</label>
+                                    <input id="lastname" name="lastname" value="{{ results.lname }}" type="text" class="form-control" placeholder="Last Name">
+                                </div>
+                            </div>
+                        </div>
+
+                          <div class="row">
+                            <div class="col-sm-4">
+                                <div class="mb-3">
+                                    <label for="mobileno">Mobile No</label>
+                                    <input id="mobileno" name="mobileno" value="{{ results.mobileno }}" type="text" class="form-control" placeholder="Mobile No">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="mb-3">
+                                    <label for="email">Email</label>
+                                    <input id="email" name="email" value="{{ results.email }}" type="text" class="form-control" placeholder="email">
+                                </div>
+                            </div>
+                              <a href="../signin_page3/{{results.id}}">
+                              <input type="button" value="Shop Now" class="btn btn-primary"></a>
+                        </div>
+
+<!--                        <div class="row">-->
+<!--                             <div class="col-sm-4">-->
+<!--                                <div class="mb-3">-->
+<!--                                    <label for="password">Password</label>-->
+<!--                                    <input id="password" name="password" type="text" class="form-control" placeholder="password">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+
+<!--                 <div class="mb-3 form-check">-->
+<!--                    <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--                    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
+<!--                  </div>-->
+                  <hr>
+
+<!--                        <div class="row">-->
+<!--                            <div class="col-sm-4">-->
+<!--                                <div class="d-flex flex-wrap gap-2">-->
+<!--                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>-->
+<!--                                    <button type="button" class="btn btn-secondary waves-effect waves-light">Cancel</button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+              </form>
+            </div>
+
+          </div>
+          <br><br>
+
+
+
+        <div class="row">
+          <footer style="background-color:  #150549;color:white;">
+            <h2>Buy The Best Eyewear From MyLens</h2><br>
+            <p> Embark on a journey of possibilities with us. Bridging the gap between style and technology, we redefine your experience.</p>
+            <br>
+            <p>A One-Stop Online Solution For Purchasing Eyewear And Its Accessories, easiest way to buy
+              With Convenient Methods Of Payment. Sunglasses as well as Eyeglasses Are<br>Available For Men And
+              Women In A Diverse Array Of Styles And Trendy Colours. If You Want To Try Out Contact Lenses, Pick The
+              Ones
+              Of Your Choice From The Extensive Variety Of Coloured Contact<br>Lenses From Our Online Store.</p>
+
+              <div class="row">
+                <div class="col">
+                  <b>Services</b><br><br>
+                  <a href="../buying_guide/" style="text-decoration: none;color:white;"><p>Buying Guide</p></a>
+                  <a href="../size_guide/" style="text-decoration: none;color:white;"><p>Frame Size</p></a>
+                </div>
+
+
+                <div class="col">
+                  <a href="../FAQs/" style="text-decoration: none;color:white;"><b>FAQ'S</b></a>
+                </div>
+
+                <div class="col">
+                  <p>Explore and enjoy various trendy <br>Eyeglasses,Sunglasses and Contact Lenses</p>
+                </div>
+              </div>
+
+            <hr>
+            <div class="row">
+              <div class="col-sm-4">
+              </div>
+              <div class="col-sm-12">
+                <div class="text-sm-end">
+                  <p5><a href=""><ion-icon name="logo-facebook"
+                        style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a>&nbsp&nbsp&nbsp<a
+                      href=""><ion-icon name="logo-instagram"
+                        style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a>&nbsp&nbsp&nbsp<a
+                      href=""><ion-icon name="logo-twitter"
+                        style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a>&nbsp&nbsp&nbsp<a
+                      href=""><ion-icon name="mail-unread-outline"
+                        style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a></p5>
+                </div>
+              </div>
+
+            </div>
+          </footer>
+        </div>
+          </body>
+  <!--modals start-->
+  <!--modal_1 for sign in page open-->
+
+  <div class="modal" id="modal_1" tabindex="-1" aria-labelledby="exampleModalLabel"data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content"  style="height:620px;">
+        <form class="row g-3" action="../signincode/" method="post">
+          {% csrf_token %}
+          <button type="button" class="btn-close position-absolute top-0 end-0 mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="col-md-12">
+            <img class="img-fluid" src=https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg><br><br>
+            <label for="validationDefault01" class="form-label" style="font-size: 32px;padding-left: 30px;">Sign-In</label>
+          </div>
+          <div class="col-md-6" style="margin-left: 20px;width:350px;">
+            <label for="validationDefault01" class="form-label">Enter Username</label>
+              <input type="email" name="email" placeholder="email" class="form-control"  aria-describedby="inputGroupPrepend2" required>
+          </div>
+
+           <div class="col-md-6" style="margin-left: 20px;width:350px;">
+            <label for="validationDefault01" class="form-label">Enter Password</label>
+              <input type="password" name="password" placeholder="password" class="form-control"  aria-describedby="inputGroupPrepend2" required>
+          </div>
+
+          <div class="col-12"><br>
+            <center><button class="btn btn-primary" type="submit" >Sign In</button></center><br>
+             <a href="#" id="forgotPasswordLink" data-toggle="modal" data-target="#modal_4">Forgot Password ? Click Here</a>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Listen for click event on the Sign In button in modal_1
+        $('#signInButton').click(function() {
+        // Hide the first modal (modal_1)
+        $('#modal_1').modal('hide');
+        // Show the second modal (modal_4)
+        $('#modal_4').modal('show');
+        });
+      });
+    </script>
+
+
+
+  <!--modal_1 for sign in page close-->
+
+  <!--sign in page 2 open-->
+
+  <div class="modal" id="modal_4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+      <div class="modal-content"  style="height:620px;">
+        <form class="row g-3">
+          <button type="button" class="btn-close position-absolute top-0 end-0 mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="col-md-12">
+            <img class="img-fluid" src=https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg>
+          </div>
+          <div class="col-12">
+            <h3  style="font-size: 32px;padding-left: 30px;">Sign-In</h3>
+          </div><br>
+          <div class="col-12">
+            <center><p>Enter your email to send Otp to mobile number</p></center>
+          </div>
+            <div class="col-5">
+              <div class="input-group" style="padding-left: 90px;width:350px;">
+                <input type="email" class="form-control" placeholder="email" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+              </div>
+            </div>
+            <br>
+
+            <div class="col-12">
+               <center><a href="">Send OTP</a></center>
+            </div><br>
+
+
+
+            <div class="col-12"><br>
+              <center><button class="btn btn-primary"   id="signinbutton" style="width:350px;" type="submit">Sign In</button></center>
+            </div>
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+<script>
+    document.getElementById('forgotPasswordLink').addEventListener('click', function () {
+        $('#modal_4').modal('show');
+    });
+</script>
+
+  <!--sign in page2 close-->
+
+
+
+<!--<script>-->
+<!--  $(document).ready(function() {-->
+<!--    // Listen for click event on the Sign In button in modal_1-->
+<!--    $('#signinbutton').click(function() {-->
+<!--      // Hide the first modal (modal_1)-->
+<!--      $('#modal_4').modal('hide');-->
+
+<!--      // Redirect to signin_page3.html-->
+<!--      window.location.href = 'signin_page3.html';-->
+<!--    });-->
+<!--  });-->
+<!--</script>-->
+
+
+
+  <!--sign up modal_2 starts-->
+
+<div class="modal" id="modal_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"  style="height:500px;">
+      <form class="row g-3" action="../head2code/" method="post">
+        {% csrf_token %}
+        <button type="button" class="btn-close position-absolute top-0 end-0 mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="col-md-12">
+          <p  style="font-size: 32px;color:#000042;margin-left: 20px;">Create an Account</p>
+        </div>
+        <div class="col-md-6" style="margin-left: 20px;width:350px;">
+          <input type="text" name="fname" class="form-control" id="validationDefault01" placeholder="First Name" required>
+        </div>
+
+
+           <div class="col-md-6" style="margin-left: 20px;width:350px;">
+             <input type="text" name="lname" class="form-control" id="validationDefault02" placeholder="Last Name" required>
+           </div>
+
+
+         <div class="col-md-6" style="margin-left: 20px;width:350px;">
+           <input type="text" name="mobileno" class="form-control" id="validationDefault03" placeholder="Mobile Number" required>
+         </div>
+
+
+         <div class="col-md-6" style="margin-left: 20px;width:350px;">
+           <input type="email" name="email" class="form-control" id="validationDefault04" placeholder="Email" required>
+         </div>
+
+         <div class="col-md-6" style="margin-left: 20px;width:350px;">
+           <input type="password" name="password" class="form-control" id="validationDefault05" placeholder="Password" required>
+         </div><br>
+
+
+
+        <div class="col-12">
+          <p style="margin-left: 20px;">By creating this account, you agree to our<a href="privacy_policy.html">Privacy Policy</a></p>
+        </div>
+
+        <div class="col-12">
+          <center><button class="btn btn-primary" type="submit"  id="create">Create an Account</button></center>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#create').click(function() {
+        $('#modal_2').modal('hide');
+        // Show the second modal (modal_4)
+        //$('#modal_1').modal('show');
+        });
+      });
+    </script>
+
+<!--sign up modal_2 close-->
+
+<!--for track order open-->
+<div class="modal" id="modal_3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"  style="height:620px;">
+      <form class="row g-3" action="../trackcode/" method="post">
+        {% csrf_token %}
+         <button type="button" class="btn-close position-absolute top-0 end-0 mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="col-md-12">
+            <img class="img-fluid" src=https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg><br><br>
+            <label for="validationDefault01" class="form-label" style="font-size: 32px;padding-left: 30px;">Sign-In</label>
+          </div>
+          <div class="col-md-6" style="margin-left: 20px;width:350px;">
+            <label for="validationDefault01" class="form-label">Enter Username</label>
+              <input type="email" name="email" placeholder="email" class="form-control"  aria-describedby="inputGroupPrepend2" required>
+          </div>
+
+           <div class="col-md-6" style="margin-left: 20px;width:350px;">
+            <label for="validationDefault01" class="form-label">Enter Password</label>
+              <input type="password" name="password" placeholder="password" class="form-control"  aria-describedby="inputGroupPrepend2" required>
+          </div>
+
+          <div class="col-12"><br>
+            <center><button class="btn btn-primary" type="submit" >Sign In</button></center><br>
+          </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Listen for click event on the Sign In button in modal_1
+    $('#SignInButton').click(function() {
+    // Hide the first modal (modal_1)
+    $('#modal_3').modal('hide');
+    // Show the second modal (modal_4)
+    $('#modal_5').modal('show');
+    });
+  });
+</script>
+
+<!--for track order close-->
+
+<!--For track order page 2 open-->
+
+<div class="modal" id="modal_5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content"  style="height:620px;">
+      <form class="row g-3">
+        <button type="button" class="btn-close position-absolute top-0 end-0 mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="col-md-12">
+          <img class="img-fluid" src=https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg>
+        </div>
+        <div class="col-12">
+          <h3  style="font-size: 32px;padding-left: 30px;">Sign-In</h3>
+        </div><br>
+        <div class="col-12">
+          <center><p>Enter one time password sent to your mobile number</p></center>
+        </div>
+          <div class="col-5">
+            <div class="input-group" style="padding-left: 90px;width:350px;">
+              <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+            </div>
+          </div>
+          <br>
+
+          <div class="col-12">
+             <center><a href="">Resend OTP</a></center>
+          </div><br>
+
+
+
+          <div class="col-12"><br>
+            <center><button class="btn btn-primary"   id="Signinbutton" style="width:350px;" type="submit">Sign In</button></center>
+          </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    $(document).ready(function() {
+      // Listen for click event on the Sign In button in modal_1
+      $('#Signinbutton').click(function() {
+        // Hide the first modal (modal_1)
+        $('#modal_5').modal('hide');
+
+        // Redirect to signin_page3.html
+        window.location.href = 'signin_page3.html';
+      });
+    });
+  </script>
+ <!--For track order page 2 close-->
+
+
+ <!--for wishlist open--> <script>
+            document.getElementById('wishlistButton').addEventListener('click', function() {
+              const wishlistEmpty = true;
+
+              if (wishlistEmpty) {
+                alert('Your wishlist is empty!');
+              } else {
+                // Wishlist has items, perform the desired action
+                // For example, redirect the user to the wishlist page
+                window.location.href = '/wishlist'; // Replace '/wishlist' with the URL of your wishlist page
+              }
+            });
+          </script>
+          <!--for wishlist close-->
+
+<!--modals close-->
+          </html>

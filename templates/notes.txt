@@ -1,0 +1,21 @@
+Test Mode: 
+
+Key ID: rzp_test_HNgCYoQZ9HmHb2
+Key Secret: eqUrCViiRPudXQhzNcrSh3T9
+
+
+Live Mode
+
+Key ID: rzp_live_HGCsLV5PjSYo8F
+Key Secret: TDUJiOvh2TuoyYuLwHeYqhim
+
+
+
+curl -X POST https://api.razorpay.com/v1/orders 
+-U [YOUR_KEY_ID]:[YOUR_KEY_SECRET]
+-H 'content-type:application/json'
+-d '{
+    "amount": 5000,
+    "currency": "INR",
+    "receipt": "qwsaq1"
+}'

@@ -1,0 +1,403 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>MyLens</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesbrand" name="author" />
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+        <!-- Bootstrap Css -->
+        <link href="{% static 'assets/css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{% static 'assets/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{% static 'assets/css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body data-sidebar="dark" data-layout-mode="light">
+
+        <div id="layout-wrapper">
+
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                </span>
+                            </a>
+
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <p style="font-size: 28px;color:white;"><b>MyLens</b></p>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="vertical-menu">
+
+                <div data-simplebar class="h-100">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu list-unstyled" id="side-menu">
+
+                            <li>
+                                <a href="../index/">
+                                    <i class="bx bx-home-circle"></i>
+                                    <span key="t-dashboards">Dashboard</span>
+                                </a>
+                            </li>
+
+                              <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Navbar
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../navbar/"style="color:black;">Add Item</a></li>
+                                    <li><a class="dropdown-item" href="../navbar_show/"style="color:black;">Show Item</a></li>
+                                </ul>
+                            </div>
+                            <br>
+
+                             <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Registration
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../add_registration/"style="color:black;">Add Registration</a></li>
+                                    <li><a class="dropdown-item" href="../registration_show/"style="color:black;">Show Registration</a></li>
+                                     <li><a class="dropdown-item" href="../edit_registration/"style="color:black;">Edit Registration</a></li>
+                                    <li><a class="dropdown-item" href="../show_edit_registration/"style="color:black;">Show Edit Registration</a></li>
+                                </ul>
+                            </div>
+
+                            <br>
+
+                              <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Product Category
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../add_category/"style="color:black;">Add Category 1</a></li>
+                                    <li><a class="dropdown-item" href="../show_category/"style="color:black;">Show Category 1</a></li>
+                                     <li><a class="dropdown-item" href="../add_category2/"style="color:black;">Add Category 2</a></li>
+                                    <li><a class="dropdown-item" href="../show_category2/"style="color:black;">Show Category 2</a></li>
+                                    <li><a class="dropdown-item" href="../add_category3/"style="color:black;">Add Category 3</a></li>
+                                    <li><a class="dropdown-item" href="../show_category3/"style="color:black;">Show Category 3</a></li>
+                                    <li><a class="dropdown-item" href="../add_pageone/"style="color:black;">Add Category 4</a></li>
+                                    <li><a class="dropdown-item" href="../show_pageone/"style="color:black;">Show Category 4</a></li>
+                                </ul>
+                            </div>
+                            <br>
+
+
+
+                              <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Add Items to Page 1
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../add_product_pageone/"style="color:black;">Add Item</a></li>
+                                    <li><a class="dropdown-item" href="../show_product_pageone/"style="color:black;">Show Item</a></li>
+                                    <li><a class="dropdown-item" href="../buy_product3/"style="color:black;">Buy Step</a></li>
+                                    <li><a class="dropdown-item" href="../show_step3/"style="color:black;">Show Step</a></li>
+                                     <li><a class="dropdown-item" href="../add_product3/"style="color:black;">Add Item 2</a></li>
+                                    <li><a class="dropdown-item" href="../show_product3/"style="color:black;">Show Item 2</a></li>
+                                     <li><a class="dropdown-item" href="../buy_product4/"style="color:black;">Buy Step 2</a></li>
+                                    <li><a class="dropdown-item" href="../show_step4/"style="color:black;">Show Step 2</a></li>
+                                </ul>
+                            </div>
+
+                            <br>
+
+                              <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Product Management
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../ecommerce_add_product/"style="color:black;">Add Product 1</a></li>
+                                    <li><a class="dropdown-item" href="../delete_product/"style="color:black;">Show Product 1</a></li>
+                                     <li><a class="dropdown-item" href="../buy_product/"style="color:black;">Buy Product 1</a></li>
+                                    <li><a class="dropdown-item" href="../show_step1/"style="color:black;">Show step 1</a></li>
+                                     <li><a class="dropdown-item" href="../add_product2/"style="color:black;">Add Product 2</a></li>
+                                    <li><a class="dropdown-item" href="../show_product2/"style="color:black;">Show Product 2</a></li>
+                                       <li><a class="dropdown-item" href="../buy_product2/"style="color:black;">Buy Product 2</a></li>
+                                    <li><a class="dropdown-item" href="../show_step2/"style="color:black;">Show Step 2</a></li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                   Shipping Data
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../shipping_data/"style="color:black;">Show Details</a></li>
+                                       <li><a class="dropdown-item" href="../order_status/"style="color:black;">Show Order Status</a></li>
+                                </ul>
+
+                            </div>
+                            <br>
+
+
+
+<!--                            <li>-->
+<!--                                <a href="javascript: void(0);" class="has-arrow waves-effect">-->
+<!--                                    <i class="bx bx-store"></i>-->
+<!--                                    <span key="t-ecommerce">Order Management</span>-->
+<!--                                </a>-->
+<!--                                <ul class="sub-menu" aria-expanded="false">-->
+<!--                                    <li><a href="../ecommerce_orders/" key="t-orders">Orders</a></li>-->
+<!--                                    <li><a href="../ecommerce_customers/" key="t-customers">Customers</a></li>-->
+<!--                                </ul>-->
+<!--                            </li> -->
+
+
+
+<!--                            <li>-->
+<!--                                <a href="../auth-logout/" class="waves-effect">-->
+<!--                                    <i class="bx bx-chat"></i>-->
+<!--                                    <span key="t-chat">Logout</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+
+
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+                </div>
+            </div>
+            <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0 font-size-18">Add Category</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Product Management</a></li>
+                                            <li class="breadcrumb-item active">Add Product</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+        
+                                        <h4 class="card-title">Basic Information</h4>
+                                        <p class="card-title-desc">Fill all information below</p>
+        
+                                        <form action="../pageonecode/" method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                             <div class="card">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title mb-3">Product Images</h4>
+                                                     <div class="fallback">
+                                                         <input name="image" type="file" />
+                                                     </div>
+                                                     <div class="dz-message needsclick">
+                                                         <div class="mb-3">
+                                                             <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                         </div>
+                                                         <h4>Drop files here or click to upload.</h4>
+                                                     </div>
+                                                     <div class="d-flex flex-wrap gap-2">
+                                                         <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
+                                                         <button type="button" class="btn btn-secondary waves-effect waves-light">Cancel</button>
+                                                     </div>
+                                        </form>
+                                    </div>
+
+                                </div> <!-- end card-->
+        
+
+
+        
+                                    </div>
+                                </div>
+
+        
+                                <!-- <div class="card">
+                                    <div class="card-body">
+        
+                                        <h4 class="card-title">Meta Data</h4>
+                                        <p class="card-title-desc">Fill all information below</p>
+        
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="mb-3">
+                                                        <label for="metatitle">Meta title</label>
+                                                        <input id="metatitle" name="productname" type="text" class="form-control" placeholder="Metatitle">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="metakeywords">Meta Keywords</label>
+                                                        <input id="metakeywords" name="manufacturername" type="text" class="form-control" placeholder="Meta Keywords">
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col-sm-6">
+                                                    <div class="mb-3">
+                                                        <label for="metadescription">Meta Description</label>
+                                                        <textarea class="form-control" id="metadescription" rows="5" placeholder="Meta Description"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
+                                                <button type="submit" class="btn btn-secondary waves-effect waves-light">Cancel</button>
+                                            </div>
+                                        </form>
+        
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script>document.write(new Date().getFullYear())</script> © MyLens.
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                    Design & Develop by Ananya
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+            <div data-simplebar class="h-100">
+                <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            
+                    <h5 class="m-0 me-2">Settings</h5>
+
+                    <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                        <i class="mdi mdi-close noti-icon"></i>
+                    </a>
+                </div>
+
+                <!-- Settings -->
+                <hr class="mt-0" />
+                <h6 class="text-center mb-0">Choose Layouts</h6>
+
+                <div class="p-4">
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-1.jpg" class="img-thumbnail" alt="layout images">
+                    </div>
+
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input theme-choice" type="checkbox" id="light-mode-switch" checked>
+                        <label class="form-check-label" for="light-mode-switch">Light Mode</label>
+                    </div>
+    
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-2.jpg" class="img-thumbnail" alt="layout images">
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch">
+                        <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+                    </div>
+    
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-3.jpg" class="img-thumbnail" alt="layout images">
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch">
+                        <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+                    </div>
+
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-4.jpg" class="img-thumbnail" alt="layout images">
+                    </div>
+                    <div class="form-check form-switch mb-5">
+                        <input class="form-check-input theme-choice" type="checkbox" id="dark-rtl-mode-switch">
+                        <label class="form-check-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                    </div>
+
+            
+                </div>
+
+            </div> <!-- end slimscroll-menu-->
+        </div>
+        <!-- /Right-bar -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- select 2 plugin -->
+        <script src="assets/libs/select2/js/select2.min.js"></script>
+
+        <!-- dropzone plugin -->
+        <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+
+        <!-- init js -->
+        <script src="assets/js/pages/ecommerce-select2.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

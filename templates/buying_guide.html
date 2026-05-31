@@ -1,0 +1,601 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<!-- css -->
+<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+<!-- js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <!--css file-->
+  <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+  <!-- ===== Link Swiper's CSS ===== -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- ===== Fontawesome CDN Link ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!--pop up -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <!--js file-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+  <!-- js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <!--for icons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--for icons close-->
+    <style>
+
+.header {
+      background-color: #fff; /* Change background color to white */
+      color: #333; /* Change text color */
+      padding: 2px 6px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      /*box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+    }
+
+     /*header */
+    /*search bar open*/
+.search-container {
+      position: relative;
+    }
+
+    #searchInput {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .options-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      z-index: 1;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: none;
+      width:100%;
+    }
+
+    .options-list li {
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .options-list li:hover {
+      background-color: #f0f0f0;
+    }
+   
+    /*search bar close*/
+  /*header close*/
+
+ 
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+
+      <header class="header">
+
+        <div class="row">
+            <div class="header" id="myHeader">
+              <div class="row">
+                <div class="col-sm-10">
+                  <a href="../do_more_be_more2/" style="font-size: 14px;text-decoration: none;color:black;">Explore & Elevate |</a>
+                  <a href="../tryon/" style="font-size: 14px;text-decoration: none;color:black;">LensTry-In |</a>
+                  <a href="../john_jacobs_nav/" style="font-size: 14px;text-decoration: none;color:black;">John Jacobs |</a>
+                  <a href="../aqua_lens/" style="font-size: 14px;text-decoration: none;color:black;">Aqualens </a>
+
+                </div>
+<!--                <div class="col-sm-2">-->
+<!--                  <div class="text-end">-->
+<!--                    <a href="" style="font-size: 11px;text-decoration: none;color:black;">Contact Us</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+
+              <div class="row">
+               <div class="col">
+                  <a style="text-decoration:none;"><p style="margin-top: 20px;font-weight:bolder;font-size:26px;color:#000042;font-family:Georgia, 'Times New Roman', Times, serif ;padding-left: 25px;">MyLens</p></a>
+                </div>
+                <div class="col-sm-5 mt-4">
+                  <div class="search-container">
+                  <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="What are you looking for?"
+                    aria-label="Search">
+                    <ul class="options-list" id="optionsList">
+                      <li style="font-size:x-large">Trending Search</li>
+                      <a href="search_eyeglass.html" style="text-decoration: none;color:black;"><li>Eyeglasses</li></a>
+                    <a href="search_sunglass.html" style="text-decoration: none;color:black;"><li>Sunglasses</li></a>
+                    <a href="search_contact.html" style="text-decoration: none;color:black;"><li>Contact Lenses</li></a>
+                    <a href="search_vinchent.html" style="text-decoration: none;color:black;"><li>Vincent Chase Eyeglasses</li></a>
+<!--                    <a href="search_vinchent_sun.html" style="text-decoration: none;color:black;"><li>Vincent Chase Sunglasses</li></a>-->
+                    <a href="search_john_jacobs.html" style="text-decoration: none;color:black;"><li>John Jacobs Eyeglasses</li></a>
+                    </ul>
+                  </div>
+                </div>
+                <script>
+                  var searchInput = document.getElementById('searchInput');
+                  var optionsList = document.getElementById('optionsList');
+
+                  // Show/hide options list when search bar is clicked
+                  searchInput.addEventListener('click', function(event) {
+                    event.stopPropagation(); // Prevent the click event from propagating to the document body
+                    optionsList.style.display = 'block';
+                  });
+
+                  // Hide options list when clicking outside the search bar
+                  document.body.addEventListener('click', function() {
+                    optionsList.style.display = 'none';
+                  });
+
+                  // Prevent the click inside the search container from closing the options list
+                  document.querySelector('.search-container').addEventListener('click', function(event) {
+                    event.stopPropagation();
+                  });
+
+                  // Handle option selection
+                  optionsList.addEventListener('click', function(event) {
+                    if (event.target.tagName === 'LI') {
+                      searchInput.value = event.target.innerText;
+                      optionsList.style.display = 'none';
+                    }
+                  });
+                </script>
+                <div class="col-sm-5 mt-3">
+                  <div class="row">
+
+                    <div class="col">
+                        <a href="#modal_3" style="text-decoration: none;color:black;font-size: 14px;"  data-bs-toggle="modal">Track Order</a>
+                    </div>
+                    <div class="col">
+                        <a href="#modal_1" style="text-decoration: none;color:black;font-size: 14px;"   data-bs-toggle="modal">Sign In </a>
+                    </div>
+                    <div class="col">
+                        <a href="#modal_2" style="text-decoration: none;color:black;font-size: 14px;"   data-bs-toggle="modal">Sign Up </a>
+                    </div>
+                    <div class="col">
+                        <a href=""  id="wishlistButton" style="text-decoration: none;color:black;font-size: 14px;"><ion-icon name="heart-outline"></ion-icon>Wishlist</a>
+                    </div>
+                    <div class="col">
+                        <a href="../cartt/" style="text-decoration: none;color:black;font-size: 14px;"><ion-icon name="cart-outline"></ion-icon> Cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-8"style="background:whitesmoke;">
+                 <a style="text-decoration: none;color:black;font-size: 16px;padding:0%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">EYEGLASSES</a>
+
+                  <a style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">COMPUTER
+                    GLASSES</a>
+                  <a style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">KIDS
+                    GLASSES</a>
+                  <a style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">CONTACT
+                    LENSES</a>
+                  <a style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">SUNGLASSES</a>
+                </div>
+
+                <div class="col"style="background:whitesmoke;">
+                  <a href="../tryon/" class="btn btn-md"
+                    style="background-color:#20B2AA; margin:0px 4px 0px 0px; display:block; text-size-adjust:100%; border-radius:4px; min-width: 100px;">3DTRYON</a>
+                </div>
+                <div class="col"style="background:whitesmoke;">
+                  <a href="../blu_button/" class="btn btn-md"
+                    style="background-color:lightblue;margin:0px 4px 0px 0px; display:block; text-size-adjust:100%; border-radius:4px; min-width: 100px;">BLU</a>
+                </div>
+                <!--<div class="col"style="background:whitesmoke;">
+                  <a href="gold_button.html" class="btn btn-md"
+                    style="background-color:#002244; color:gold; font-size:medium; display:block; text-size-adjust:100%; border-radius:4px; min-width: 100px;">GOLD</a>
+                </div>-->
+              </div>
+            </div>
+        </div>
+    </header>
+    <!--header close-->
+
+       <!--- <div class="row">
+            <img src="s1.png">
+        </div>
+        <br>-->
+
+        <div class="row">
+            <img src="{% static 'images/Screenshot%20(3).png' %}">
+        </div>
+
+        <div class="row">
+            <img src="{% static 'images/s2.png' %}">
+        </div>
+        <br>
+
+        <!--<div class="row">
+            <img src="s4.png">
+        </div>-->
+
+        <div class="row">
+          <img src="{% static 'images/s5.png' %}">
+      </div>
+
+      <div class="row">
+        <img src="{% static 'images/s6.png' %}">
+    </div>
+
+    <div class="row">
+      <img src="{% static 'images/s7.png' %}">
+  </div>
+  <br>
+
+  <div class="row">
+    <img src="{% static 'images/s10.png' %}">
+</div><br>
+
+<div class="row">
+  <img src="{% static 'images/s11.png' %}">
+</div><br>
+
+
+
+<div class="row">
+  <img src="{% static 'images/s12.png' %}">
+</div>
+
+<div class="row">
+  <img src="{% static 'images/s13.png' %}">
+</div><br>
+
+<div class="row">
+  <img src="{% static 'images/s14.png' %}">
+</div>
+
+<div class="row">
+  <img src="{% static 'images/s15.png' %}">
+</div><br>
+
+<div class="row">
+  <img src="{% static 'images/s16.png' %}">
+</div>
+
+<div class="row">
+  <img src="{% static 'images/s17.png' %}">
+</div><br>
+
+<div class="row">
+  <img src="{% static 'images/s19.png' %}">
+</div>
+
+<div class="row">
+  <img src="{% static 'images/s20.png' %}">
+</div>
+<br>
+
+<div class="row">
+  <img src="{% static 'images/s21.png' %}">
+</div>
+<br>
+
+<div class="row">
+  <img src="{% static 'images/s22.png' %}">
+</div>
+<br>
+
+<!--<footer style="background-color:  #150549;color:white;">
+  <div class="container-fluid">
+     <br>
+     <br>
+      <div class="row">
+          <div class="col-sm-2">
+              <h4>Services</h4>
+              <br>
+              <a href="">
+                  <li style="list-style-type: none;text-decoration:none;color: white;">Store Locator</li><br>
+              </a>
+              <a href="">
+                  <li style="list-style-type: none;text-decoration:none;color: white;">Buying Guide</li><br>
+              </a>
+              <a href="">
+                  <li style="list-style-type: none;text-decoration:none;color: white;">Frame Size</li>
+              </a>
+
+
+          </div>
+          <div class="col-sm-2">
+              <h4>About Us</h4>
+              <br>
+              <a href="">
+                  <li style="list-style-type: none;text-decoration:none;color: white;">We Are Hiring</li><br>
+              </a>
+              <a href="">
+                  <li style="list-style-type: none;text-decoration:none;color: white;">Refer and Earn</li><br>
+              </a>
+              <a href="">
+                  <li style="list-style-type: none;text-decoration:none;color: white;">About us</li><br>
+              </a>
+              <a href="">
+                  <li style="list-style-type: none;text-decoration:none;color: white;">Lenskart Coupons</li>
+              </a>
+
+          </div>
+          <div class="col-sm-2">
+              <h4>Help</h4>
+              <br>
+              <a href="">
+                  <li style="list-style-type: none;text-decoration:none;color: white;">FAQ's</li><br>
+              </a>
+
+          </div>
+          <div class="col-sm-6">
+              <div class="text-center">
+                  <button type="button" class="btn btn-light mx-3"><img src="270.png"
+                          style="height:50px;width:150px;"></button>
+                  <button type="button" class="btn btn-light mx-3"><img src="109.png"
+                          style="height:50px;width:150px;"></button>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <p1>Download Lenskart App to buy<br>Eyeglasses,Sunglasses and Contact Lenses</p1>
+              </div>
+          </div>
+
+      </div>
+      <hr>
+      <div class="row">
+          <div class="col-sm-4">
+              <a href="">
+                  <p3 style="list-style-type: none;text-decoration:none;color: white;">T & C</p3>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              </a>
+              <a href="">
+                  <p3 style="list-style-type: none;text-decoration:none;color: white;">Privacy</p3>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              </a>
+              <a href="">
+                  <p3 style="list-style-type: none;text-decoration:none;color: white;">Disclaimer</p3>
+              </a>
+          </div>
+          <div class="col-sm-8">
+              <div class="text-sm-end">
+                  <p4>Version1.0.0 || Follow Us </p4>
+                  <p5><a href=""><ion-icon name="logo-facebook"
+                              style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a>&nbsp&nbsp&nbsp<a
+                          href=""><ion-icon name="logo-instagram"
+                              style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a>&nbsp&nbsp&nbsp<a
+                          href=""><ion-icon name="logo-twitter"
+                              style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a>&nbsp&nbsp&nbsp<a
+                          href=""><ion-icon name="mail-unread-outline"
+                              style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a></p5>
+              </div>
+          </div>
+
+      </div>
+
+
+</footer>-->
+</div>
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/65fe7c43a0c6737bd123d965/1hpl1aqkv';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+
+</body>
+
+
+<!--for track order open-->
+<div class="modal" id="modal_3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"  style="height:140px;">
+         <button type="button" class="btn-close position-absolute top-0 end-0 mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <b> Hello Specsy Lovers !</b>
+         <p style="text-align:center;">You haven't logged in Yet !</p>
+         <p style="text-align:center;">Login to enjoy shopping</p>
+    </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Listen for click event on the Sign In button in modal_1
+    $('#SignInButton').click(function() {
+    // Hide the first modal (modal_1)
+    $('#modal_3').modal('hide');
+    // Show the second modal (modal_4)
+    $('#modal_5').modal('show');
+    });
+  });
+</script>
+
+<!--for track order close-->
+
+ <!--modal_1 for sign in page open-->
+
+  <div class="modal" id="modal_1" tabindex="-1" aria-labelledby="exampleModalLabel"data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content"  style="height:620px;">
+        <form class="row g-3" action="../signincode/" method="post">
+          {% csrf_token %}
+          <button type="button" class="btn-close position-absolute top-0 end-0 mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="col-md-12">
+            <img class="img-fluid" src=https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg><br><br>
+            <label for="validationDefault01" class="form-label" style="font-size: 32px;padding-left: 30px;">Sign-In</label>
+          </div>
+          <div class="col-md-6" style="margin-left: 20px;width:350px;">
+            <label for="validationDefault01" class="form-label">Enter Username</label>
+              <input type="email" name="email" placeholder="email" class="form-control"  aria-describedby="inputGroupPrepend2" required>
+          </div>
+
+           <div class="col-md-6" style="margin-left: 20px;width:350px;">
+            <label for="validationDefault01" class="form-label">Enter Password</label>
+              <input type="password" name="password" placeholder="password" class="form-control"  aria-describedby="inputGroupPrepend2" required>
+          </div>
+
+          <div class="col-12"><br>
+            <center><button class="btn btn-primary" type="submit" >Sign In</button></center><br>
+             <a href="../forgetpass/" id="forgotPasswordLink">Forgot Password ? Click Here</a>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+ <!--sign up modal_2 starts-->
+
+<div class="modal" id="modal_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"  style="height:500px;">
+      <form class="row g-3" action="../head2code/" method="post">
+        {% csrf_token %}
+        <div class="col-md-12">
+          <p  style="font-size: 32px;color:#000042;margin-left: 20px;">Create an Account</p>
+        </div>
+        <div class="col-md-6" style="margin-left: 20px;width:350px;">
+          <input type="text" name="fname" class="form-control" id="validationDefault01" placeholder="First Name" required>
+        </div>
+        <div class="col-md-6" style="margin-left: 20px;width:350px;">
+             <input type="text" name="lname" class="form-control" id="validationDefault02" placeholder="Last Name" required>
+           </div>
+         <div class="col-md-6" style="margin-left: 20px;width:350px;">
+           <input type="text" name="mobileno" class="form-control" id="validationDefault03" placeholder="Mobile Number" required>
+         </div>
+         <div class="col-md-6" style="margin-left: 20px;width:350px;">
+           <input type="email" name="email" class="form-control" id="validationDefault04" placeholder="Email" required>
+         </div>
+         <div class="col-md-6" style="margin-left: 20px;width:350px;">
+           <input type="password" name="password" class="form-control" id="validationDefault05" placeholder="Password" required>
+         </div><br>
+        <div class="col-12">
+          <p style="margin-left: 20px;">By creating this account, you agree to our<a href="privacy_policy.html">Privacy Policy</a></p>
+        </div>
+        <div class="col-12">
+          <center><button class="btn btn-primary" type="submit"  id="create">Create an Account</button></center>
+        </div>
+          <div class="col-12">
+              <p style="margin-left: 20px;">If existing user then Log in</p>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#create').click(function() {
+        $('#modal_2').modal('hide');
+        // Show the second modal (modal_4)
+        //$('#modal_1').modal('show');
+        });
+      });
+    </script>
+
+
+ <!--for wishlist open--> <script>
+            document.getElementById('wishlistButton').addEventListener('click', function() {
+              const wishlistEmpty = true;
+
+              if (wishlistEmpty) {
+                alert('Your wishlist is empty!');
+              } else {
+                // Wishlist has items, perform the desired action
+                // For example, redirect the user to the wishlist page
+                window.location.href = '/wishlist'; // Replace '/wishlist' with the URL of your wishlist page
+              }
+            });
+          </script>
+          <!--for wishlist close-->
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+        

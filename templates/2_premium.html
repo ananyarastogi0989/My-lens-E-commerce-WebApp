@@ -1,0 +1,3012 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- css -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+  <!--for icons-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!--for icons close-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .vl {
+      border-left: 1px solid rgb(0, 0, 0);
+      height: 1000px;
+      position: relative;
+      left: 100%;
+      margin-left: -3px;
+    }
+
+    .div1 {
+      width: 60px;
+      height: 50px;
+      padding: 4px;
+      border: 1px solid rgb(7, 7, 7);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .div2 {
+      width: 60px;
+      height: 50px;
+      padding: 4px;
+      border: 1px solid rgb(7, 7, 7);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .div3 {
+      width: 60px;
+      height: 50px;
+      padding: 4px;
+      border: 1px solid rgb(7, 7, 7);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .div4 {
+      width: 60px;
+      height: 50px;
+      padding: 4px;
+      border: 1px solid rgb(7, 7, 7);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .div5 {
+      width: 60px;
+      height: 50px;
+      padding: 4px;
+      border: 1px solid rgb(7, 7, 7);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .div6 {
+      width: 60px;
+      height: 50px;
+      padding: 4px;
+      border: 1px solid rgb(7, 7, 7);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .div7 {
+      width: 60px;
+      height: 50px;
+      padding: 4px;
+      border: 1px solid rgb(7, 7, 7);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .div8 {
+      width: 60px;
+      height: 50px;
+      padding: 4px;
+      border: 1px solid rgb(7, 7, 7);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .div9 {
+      width: 60px;
+      height: 50px;
+      padding: 4px;
+      border: 1px solid rgb(7, 7, 7);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    div.ex3 {
+      background-color: white;
+      width: 300px;
+      height: 300px;
+      overflow: auto;
+    }
+
+    div.ex2 {
+      background-color: white;
+      width: 275px;
+      height: 100%;
+      overflow: auto;
+      max-height: 5000px;
+      position: fixed;
+    } 
+
+    /*dropdown*/
+    .dropbtn {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: #fcfcfd;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 320px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #ddd;
+    }
+
+    .show {
+      display: block;
+    }
+
+    /*dropdown close */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .image-container:hover {
+      background-image: url('hover_340.jpg');
+    }
+
+    @media (min-width: 576px) {
+      .col-sm-3 {
+        flex: 0 0 auto;
+        width: 17%;
+      }
+    }
+
+    .glass-row {
+      margin-left: 100px;
+    }
+     /*header */
+    /*search bar open*/
+.search-container {
+      position: relative;
+    }
+
+    #searchInput {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .options-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      z-index: 1;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: none;
+      width:100%;
+    }
+
+    .options-list li {
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .options-list li:hover {
+      background-color: #f0f0f0;
+    }
+   
+    /*search bar close*/
+  /*header close*/
+
+  
+  .sider-bar{
+    margin-top: 10px;
+  }
+  .card-section{
+    margin-top:-40px;
+
+  }
+  .cards{
+    margin-top:-40px;
+  }
+  #sho{
+    margin-top:-40px;
+  }
+  .header {
+      background-color: #fff; /* Change background color to white */
+      color: #333; /* Change text color */
+      padding: 2px 13px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      /*box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header class="header">
+
+      <div class="row">
+          <div class="header" id="myHeader">
+            <div class="row">
+              <div class="col-sm-10">
+                <a href="do_more_be_more2.html" style="font-size: 11px;text-decoration: none;color:black;">Do More,Be More</a>
+                <a href="" style="font-size: 11px;text-decoration: none;color:black;">Tryin3D |</a>
+                <a href="store2.html" style="font-size: 11px;text-decoration: none;color:black;">Store Locator |</a>
+                <a href="singapore2.html" style="font-size: 11px;text-decoration: none;color:black;">Singapore |</a>
+                <a href="" style="font-size: 11px;text-decoration: none;color:black;">UAE |</a>
+                <a href="" style="font-size: 11px;text-decoration: none;color:black;">John Jacobs |</a>
+                <a href="" style="font-size: 11px;text-decoration: none;color:black;">Aqualens |</a>
+                <a href="" style="font-size: 11px;text-decoration: none;color:black;">Cobrowsing |</a>
+                <a href="" style="font-size: 11px;text-decoration: none;color:black;">Engineering Blog |</a>
+                <a href="" style="font-size: 11px;text-decoration: none;color:black;">Lenskart Franchise | </a>
+                <a href="head2.html" style="font-size: 11px;text-decoration: none;color:black;">Home</a>
+    
+              </div>
+              <div class="col-sm-2">
+                <div class="text-end">
+                  <a href="" style="font-size: 11px;text-decoration: none;color:black;">Contact Us</a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="row">
+              <div class="col">
+                <a href=""><img src="{% static 'images/323.svg' %}"></a>
+              </div>
+              <div class="col mt-3">
+                <ion-icon name="call-outline"></ion-icon>99998-99998
+              </div>
+              <div class="col mt-3">
+                <div class="search-container">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="What are you looking for?"
+                  aria-label="Search">
+                  <ul class="options-list" id="optionsList">
+                    <li style="font-size:x-large">Trending Search</li>
+                    <li>Eyeglasses</li>
+                    <li>Sunglasses</li>
+                    <li>Contact Lenses</li>
+                    <li>Vincent Chase Eyeglasses</li>
+                    <li>Vincent Chase Sunglasses</li>
+                    <li>John Jacobs Eyeglasses</li>
+                    <li>John Jacobs Sunglasses</li>
+                    <li>Mens Sunglasses</li>
+                    <li>Women Sunglasses</li>
+                    <li>Aviator</li>
+                    <li>Eyewear Accessories</li>
+                    <li>Purevision</li>
+                    <li>Acuvue</li>
+                    <li>Eye Checkup</li>
+                  </ul>
+                </div>
+              </div>
+              <script>
+                var searchInput = document.getElementById('searchInput');
+                var optionsList = document.getElementById('optionsList');
+              
+                // Show/hide options list when search bar is clicked
+                searchInput.addEventListener('click', function(event) {
+                  event.stopPropagation(); // Prevent the click event from propagating to the document body
+                  optionsList.style.display = 'block';
+                });
+              
+                // Hide options list when clicking outside the search bar
+                document.body.addEventListener('click', function() {
+                  optionsList.style.display = 'none';
+                });
+              
+                // Prevent the click inside the search container from closing the options list
+                document.querySelector('.search-container').addEventListener('click', function(event) {
+                  event.stopPropagation();
+                });
+              
+                // Handle option selection
+                optionsList.addEventListener('click', function(event) {
+                  if (event.target.tagName === 'LI') {
+                    searchInput.value = event.target.innerText;
+                    optionsList.style.display = 'none';
+                  }
+                });
+              </script>
+              <div class="col-sm-5 mt-3">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <a href="" style="text-decoration: none;color:black;font-size: 14px;">Track Order</a>
+                  </div>
+                  <div class="col-sm-2">
+                    <a href="" style="text-decoration: none;color:black;font-size: 14px;">Sign In </a>
+                  </div>
+                  <div class="col-sm-2">
+                    <a href="" style="text-decoration: none;color:black;font-size: 14px;">Sign Up </a>
+                  </div>
+                  <div class="col-sm-2">
+                    <a href="" style="text-decoration: none;color:black;font-size: 14px;">Wishlist </a>
+                  </div>
+                  <div class="col-sm-2">
+                    <a href="" style="text-decoration: none;color:black;font-size: 14px;">Cart </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-8"style="background:whitesmoke;">
+               <a href=""
+                  style="text-decoration: none;color:black;font-size: 16px;padding:0%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">EYEGLASSES</a>
+                  
+                <a href=""
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">COMPUTER
+                  GLASSES</a>
+                <a href=""
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">KIDS
+                  GLASSES</a>
+                <a href=""
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">CONTACT
+                  LENSES</a>
+                <a href=""
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">SUNGLASSES</a>
+                <a href=""
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">HOME
+                  EYE-TEST</a>
+                <a href=""
+                  style="text-decoration: none;color:black;font-size: 16px;padding:1%;color:#000042;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">STORE
+                  LOCATOR</a>
+              </div>
+    
+              <div class="col"style="background:whitesmoke;">
+                <button class="btn btn-md"
+                  style="background-color:#20B2AA; margin:0px 4px 0px 0px; display:block; text-size-adjust:100%; border-radius:4px; min-width: 100px;">3DTRYON</button>
+              </div>
+              <div class="col"style="background:whitesmoke;">
+                <button class="btn btn-md"
+                  style="background-color:lightblue;margin:0px 4px 0px 0px; display:block; text-size-adjust:100%; border-radius:4px; min-width: 100px;">BLU</button>
+              </div>
+              <div class="col"style="background:whitesmoke;">
+                <button class="btn btn-md"
+                  style="background-color:#002244; color:gold; font-size:medium; display:block; text-size-adjust:100%; border-radius:4px; min-width: 100px;">GOLD</button>
+              </div>
+            </div>
+          </div>
+      </div>
+  </header>
+  <!--header close-->
+    <!-- siderbar -->
+    <div class="row ">
+      <div class="col-sm-3 text-center sider-bar">
+        <div class="ex2">
+          <p class="text-start">FRAME TYPE</p>
+          <div class="row">
+            <div class="col">
+              <div class="div1">
+                <div class="center">
+                  <img src="{% static 'images/326.webp' %}">
+                  <p style="font-size: 11px;">Full Rim</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="div2">
+                <div class="center">
+                  <img src="{% static 'images/327.webp' %}">
+                  <p style="font-size: 11px;">Half Rim</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="div3">
+                <div class="center">
+                  <img src="{% static 'images/328.webp' %}">
+                  <p style="font-size: 11px;">Rimless</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <p>FRAME SHAPE</p>
+          <div class="row">
+            <div class="col">
+              <div class="div4">
+                <div class="center">
+                  <img src="{% static 'images/329.webp' %}">
+                  <p style="font-size: 11px;">Round</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="div5">
+                <div class="center">
+                  <img src="{% static 'images/330.webp' %}">
+                  <p style="font-size: 11px;">Rectangle</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="div6">
+                <div class="center">
+                  <img src="{% static 'images/331.webp' %}">
+                  <p style="font-size: 11px;">Square</p>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col">
+              <div class="div7">
+                <div class="center">
+                  <img src="332.webp">
+                  <p style="font-size: 11px;">Round</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="div8">
+                <div class="center">
+                  <img src="333.webp">
+                  <p style="font-size: 11px;">Wayfarer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="div9">
+                <div class="center">
+                  <img src="334.webp">
+                  <p style="font-size: 11px;">Cat Eye</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <div class="div7">
+                <div class="center">
+                  <img src="335.webp">
+                  <p style="font-size: 11px;">Aviator</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="div8">
+                <div class="center">
+                  <img src="336.webp">
+                  <p style="font-size: 11px;">Clubmaster</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="div9">
+                <div class="center">
+                  <img src="337.webp">
+                  <p style="font-size: 11px;">Oval</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <div class="div9">
+                <div class="center">
+                  <img src="338.webp">
+                  <p style="font-size: 11px;">Octagon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row text-start">
+            <p>FRAME COLOR</p>
+            <div class="row">
+              <div class="ex3">
+                <p>Black(254)</p>
+                <p>Gold(136)</p>
+                <p>Silver(134)</p>
+                <p>Brown(98)</p>
+                <p>Blue(67)</p>
+                <p>Grey(66)</p>
+                <p>Gunmetal(62)</p>
+                <p>Transparent(59)</p>
+                <p>Green(42)</p>
+                <p>Pink(35)</p>
+                <p>Tortoise(21)</p>
+                <p>Rose Gold(21)</p>
+                <p>Purple(20)</p>
+                <p>Maroon(20)</p>
+                <p>Copper(16)</p>
+                <p>White(8)</p>
+                <p>Red(7)</p>
+                <p>Orange(5)</p>
+                <p>Yellow(4)</p>
+                <p>Brown Transparent(3)</p>
+                <p>Violet(2)</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row text-start">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    FRAME SIZE
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    PRICE
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingfour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                    GENDER
+                  </button>
+                </h2>
+                <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingfive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                    MATERIAL
+                  </button>
+                </h2>
+                <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingsix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                    WEIGHT GROUP
+                  </button>
+                </h2>
+                <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingseven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                    PRESCRIPTION TYPE
+                  </button>
+                </h2>
+                <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingseven"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingeight">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
+                    SUPPORTED POWERS
+                  </button>
+                </h2>
+                <div id="collapseeight" class="accordion-collapse collapse" aria-labelledby="headingeight"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingnine">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
+                    COLLECTION
+                  </button>
+                </h2>
+                <div id="collapsenine" class="accordion-collapse collapse" aria-labelledby="headingnine"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingten">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
+                    SUB COLLECTION
+                  </button>
+                </h2>
+                <div id="collapseten" class="accordion-collapse collapse" aria-labelledby="headingten"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingeleven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseeleven" aria-expanded="false" aria-controls="collapseeleven">
+                    FRAME WIDTH
+                  </button>
+                </h2>
+                <div id="collapseeleven" class="accordion-collapse collapse" aria-labelledby="headingeleven"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingtwelve">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsetwelve" aria-expanded="false" aria-controls="collapsetwelve">
+                    PRODUCT TYPE
+                  </button>
+                </h2>
+                <div id="collapsetwelve" class="accordion-collapse collapse" aria-labelledby="headingtwelve"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this
+                    with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- card section  -->
+      <div class="col-sm-9 p-0 card-section">
+
+        <div class="row m-5" style="background-color:rgb(230, 227, 227);margin-top:0px;padding-top: 0px;">
+          <div class="col-3">
+          <h6 style="font-size: 14px; padding-top:11px;">PREMIUM EYEGLASSES COLLECTION</h6>
+          </div>
+          <div class="col" style="font-size: 14px; padding-top:9px;">
+            VIEW FRAMES
+          </div>
+          <div class="col"style="font-size: 14px; padding-top:9px;">
+             <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+              <label class="form-check-label" for="flexSwitchCheckChecked">VIEW 3D TRY ON</label>
+            </div>
+          </div>
+          <div class="col"style="font-size: 14px; padding-top:9px;">
+            <ion-icon name="arrow-up-outline" style="color:green;"></ion-icon><ion-icon name="arrow-down-outline"style="color:green;"></ion-icon>SORT BY 
+          </div>
+          <div class="col"style="font-size: 14px; padding-top:9px;">
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col" id="sho">
+            <center>Showing 270 of 1065 Results</center>
+          </div>
+         </div>
+
+
+
+        
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton1" class="like-container1" onclick="like1Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like1Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton1');
+                  if (liked) {
+                    likeButton1.classList.add('liked');
+                    likeButton1.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton1.classList.remove('liked');
+                    likeButton1.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton2" class="like-container2" onclick="like2Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like2Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton2');
+                  if (liked) {
+                    likeButton2.classList.add('liked');
+                    likeButton2.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton2.classList.remove('liked');
+                    likeButton2.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton3" class="like-container3" onclick="like3Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like3Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton3');
+                  if (liked) {
+                    likeButton3.classList.add('liked');
+                    likeButton3.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton3.classList.remove('liked');
+                    likeButton3.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton4" class="like-container4" onclick="like4Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like4Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton4');
+                  if (liked) {
+                    likeButton4.classList.add('liked');
+                    likeButton4.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton4.classList.remove('liked');
+                    likeButton4.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+          
+
+
+
+          </div>
+          <div class="col-sm-4">
+            
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton5" class="like-container5" onclick="like5Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like5Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton5');
+                  if (liked) {
+                    likeButton5.classList.add('liked');
+                    likeButton5.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton5.classList.remove('liked');
+                    likeButton5.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="col-sm-4">
+          
+             
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton6" class="like-container6" onclick="like6Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like6Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton6');
+                  if (liked) {
+                    likeButton6.classList.add('liked');
+                    likeButton6.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton6.classList.remove('liked');
+                    likeButton6.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton7" class="like-container7" onclick="like7Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like7Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton7');
+                  if (liked) {
+                    likeButton7.classList.add('liked');
+                    likeButton7.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton7.classList.remove('liked');
+                    likeButton7.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton8" class="like-container8" onclick="like8Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like8Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton8');
+                  if (liked) {
+                    likeButton8.classList.add('liked');
+                    likeButton8.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton8.classList.remove('liked');
+                    likeButton8.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton9" class="like-container9" onclick="like9Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like9Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton9');
+                  if (liked) {
+                    likeButton9.classList.add('liked');
+                    likeButton9.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton9.classList.remove('liked');
+                    likeButton9.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton10" class="like-container10" onclick="like10Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like10Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton10');
+                  if (liked) {
+                    likeButton10.classList.add('liked');
+                    likeButton10.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton10.classList.remove('liked');
+                    likeButton10.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton11" class="like-container11" onclick="like11Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like11Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton11');
+                  if (liked) {
+                    likeButton11.classList.add('liked');
+                    likeButton11.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton11.classList.remove('liked');
+                    likeButton11.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton12" class="like-container12" onclick="like12Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like12Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton12');
+                  if (liked) {
+                    likeButton12.classList.add('liked');
+                    likeButton12.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton12.classList.remove('liked');
+                    likeButton12.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton13" class="like-container13" onclick="like13Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like13Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton13');
+                  if (liked) {
+                    likeButton13.classList.add('liked');
+                    likeButton13.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton13.classList.remove('liked');
+                    likeButton13.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton14" class="like-container14" onclick="like14Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like14Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton14');
+                  if (liked) {
+                    likeButton14.classList.add('liked');
+                    likeButton14.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton14.classList.remove('liked');
+                    likeButton14.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton15" class="like-container15" onclick="like15Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like15Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton15');
+                  if (liked) {
+                    likeButton15.classList.add('liked');
+                    likeButton15.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton15.classList.remove('liked');
+                    likeButton15.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton16" class="like-container16" onclick="like16Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like16Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton16');
+                  if (liked) {
+                    likeButton16.classList.add('liked');
+                    likeButton16.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton16.classList.remove('liked');
+                    likeButton16.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton17" class="like-container17" onclick="like17Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like17Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton17');
+                  if (liked) {
+                    likeButton17.classList.add('liked');
+                    likeButton17.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton17.classList.remove('liked');
+                    likeButton17.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton18" class="like-container18" onclick="like18Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like18Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton18');
+                  if (liked) {
+                    likeButton18.classList.add('liked');
+                    likeButton18.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton18.classList.remove('liked');
+                    likeButton18.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton19" class="like-container19" onclick="like19Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like19Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton19');
+                  if (liked) {
+                    likeButton19.classList.add('liked');
+                    likeButton19.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton19.classList.remove('liked');
+                    likeButton19.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton20" class="like-container20" onclick="like20Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like20Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton20');
+                  if (liked) {
+                    likeButton20.classList.add('liked');
+                    likeButton20.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton20.classList.remove('liked');
+                    likeButton20.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton21" class="like-container21" onclick="like21Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like21Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton21');
+                  if (liked) {
+                    likeButton21.classList.add('liked');
+                    likeButton21.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton21.classList.remove('liked');
+                    likeButton21.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton22" class="like-container22" onclick="like22Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like22Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton22');
+                  if (liked) {
+                    likeButton22.classList.add('liked');
+                    likeButton22.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton22.classList.remove('liked');
+                    likeButton22.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton23" class="like-container23" onclick="like23Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like23Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton23');
+                  if (liked) {
+                    likeButton23.classList.add('liked');
+                    likeButton23.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton23.classList.remove('liked');
+                    likeButton23.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton24" class="like-container24" onclick="like24Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like24Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton24');
+                  if (liked) {
+                    likeButton24.classList.add('liked');
+                    likeButton24.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton24.classList.remove('liked');
+                    likeButton24.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton25" class="like-container25" onclick="like25Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like25Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton25');
+                  if (liked) {
+                    likeButton25.classList.add('liked');
+                    likeButton25.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton25.classList.remove('liked');
+                    likeButton25.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton26" class="like-container26" onclick="like26Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like26Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton26');
+                  if (liked) {
+                    likeButton26.classList.add('liked');
+                    likeButton26.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton26.classList.remove('liked');
+                    likeButton26.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton27" class="like-container27" onclick="like27Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like27Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton27');
+                  if (liked) {
+                    likeButton27.classList.add('liked');
+                    likeButton27.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton27.classList.remove('liked');
+                    likeButton27.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton34" class="like-container34" onclick="like34Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like34Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton34');
+                  if (liked) {
+                    likeButton34.classList.add('liked');
+                    likeButton34.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton34.classList.remove('liked');
+                    likeButton34.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton35" class="like-container35" onclick="like35Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like35Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton35');
+                  if (liked) {
+                    likeButton35.classList.add('liked');
+                    likeButton35.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton35.classList.remove('liked');
+                    likeButton35.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton36" class="like-container36" onclick="like36Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like36Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton36');
+                  if (liked) {
+                    likeButton36.classList.add('liked');
+                    likeButton36.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton36.classList.remove('liked');
+                    likeButton36.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton37" class="like-container37" onclick="like37Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like37Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton37');
+                  if (liked) {
+                    likeButton37.classList.add('liked');
+                    likeButton37.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton37.classList.remove('liked');
+                    likeButton37.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton38" class="like-container38" onclick="like38Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like38Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton38');
+                  if (liked) {
+                    likeButton38.classList.add('liked');
+                    likeButton38.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton38.classList.remove('liked');
+                    likeButton38.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton39" class="like-container39" onclick="like39Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like39Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton39');
+                  if (liked) {
+                    likeButton39.classList.add('liked');
+                    likeButton39.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton39.classList.remove('liked');
+                    likeButton39.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton40" class="like-container40" onclick="like40Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like40Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton40');
+                  if (liked) {
+                    likeButton40.classList.add('liked');
+                    likeButton40.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton40.classList.remove('liked');
+                    likeButton40.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton41" class="like-container41" onclick="like41Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like41Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton41');
+                  if (liked) {
+                    likeButton41.classList.add('liked');
+                    likeButton41.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton41.classList.remove('liked');
+                    likeButton41.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton42" class="like-container42" onclick="like42Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like42Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton42');
+                  if (liked) {
+                    likeButton42.classList.add('liked');
+                    likeButton42.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton42.classList.remove('liked');
+                    likeButton42.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton43" class="like-container43" onclick="like43Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like43Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton43');
+                  if (liked) {
+                    likeButton43.classList.add('liked');
+                    likeButton43.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton43.classList.remove('liked');
+                    likeButton43.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton44" class="like-container44" onclick="like44Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like44Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton44');
+                  if (liked) {
+                    likeButton44.classList.add('liked');
+                    likeButton44.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton44.classList.remove('liked');
+                    likeButton44.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton45" class="like-container45" onclick="like45Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like45Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton45');
+                  if (liked) {
+                    likeButton45.classList.add('liked');
+                    likeButton45.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton45.classList.remove('liked');
+                    likeButton45.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton43" class="like-container43" onclick="like43Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like43Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton43');
+                  if (liked) {
+                    likeButton43.classList.add('liked');
+                    likeButton43.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton43.classList.remove('liked');
+                    likeButton43.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton44" class="like-container44" onclick="like44Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like44Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton44');
+                  if (liked) {
+                    likeButton44.classList.add('liked');
+                    likeButton44.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton44.classList.remove('liked');
+                    likeButton44.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton45" class="like-container45" onclick="like45Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like45Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton45');
+                  if (liked) {
+                    likeButton45.classList.add('liked');
+                    likeButton45.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton45.classList.remove('liked');
+                    likeButton45.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton46" class="like-container46" onclick="like46Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like46Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton46');
+                  if (liked) {
+                    likeButton46.classList.add('liked');
+                    likeButton46.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton46.classList.remove('liked');
+                    likeButton46.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton47" class="like-container47" onclick="like47Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like47Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton47');
+                  if (liked) {
+                    likeButton47.classList.add('liked');
+                    likeButton47.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton47.classList.remove('liked');
+                    likeButton47.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton48" class="like-container48" onclick="like48Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like48Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton48');
+                  if (liked) {
+                    likeButton48.classList.add('liked');
+                    likeButton48.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton48.classList.remove('liked');
+                    likeButton48.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-4">
+
+
+            <!--card 1 starts-->
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton49" class="like-container49" onclick="like49Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like49Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton50');
+                  if (liked) {
+                    likeButton50.classList.add('liked');
+                    likeButton50.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton50.classList.remove('liked');
+                    likeButton50.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+            
+            <!--card1 close-->
+
+
+
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton50" class="like-container50" onclick="like50Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like50Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton50');
+                  if (liked) {
+                    likeButton50.classList.add('liked');
+                    likeButton50.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton50.classList.remove('liked');
+                    likeButton50.innerHTML = '<i c51ss="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+           
+            <div class="card" style="width: 20rem;">
+              <div class="text-end">
+                <div id="likeButton51" class="like-container48" onclick="like51Toggle()">
+                  <i class="far fa-heart fa-2x"></i>
+                </div>
+              </div>
+              <script>
+                var liked = false;
+
+                function like51Toggle() {
+                  liked = !liked;
+                  var likeButton = document.getElementById('likeButton51');
+                  if (liked) {
+                    likeButton51.classList.add('liked');
+                    likeButton51.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
+                  } else {
+                    likeButton51.classList.remove('liked');
+                    likeButton51.innerHTML = '<i class="far fa-heart fa-2x"></i>';
+                  }
+                }
+              </script>
+              <div class="image-container">
+
+                <img src="339.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <br>
+                <h5 class="card-title" style="font-size:18px;">John Jacobs</h5>
+                <p class="card-text">Size: Narrow-John Jacobs</p>
+                <p style="font-size: 20px;">&#8377;3000</p>
+                <br>
+                <div style="background-color: rgb(240, 232, 187);">Buy 1 For &#8377;2000 | 2 For &#8377;3000</div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        
+        
+        
+
+        <!-- footer 1  -->
+        <div class="row m-5">
+          <div class="col-sm-12">
+            <footer1>
+              <h5 style="font-size: 14px;color:gray;">Premium Eyeglasses Frames</h5>
+              <p style="font-size: 12px;color:gray;">
+                This collection features prestigious top in line international lifestyle brands, renowned for impeccable
+                design, superior quality and attention to details. Original designs make these premium eyeglasses
+                collection
+                completely ageless.With stringent penchant for high quality and global standards, these global brands
+                put
+                into use the most advanced technological innovation to guarantee the conventions associated with
+                superior
+                glasses.<br>
+                These eyeglasses strike a distinct note in the fashion world and are accepted as the global trend
+                setters in
+                the fashion terminals. All the above mentioned brands boast of a rich and brilliant history.<br>
+                <br>
+                This branded premium eyeglasses collection features all the authentic global brands like Austin Reed,
+                Carrera, John Jacobs, RayBan, Senorita, Vintage and Vogue and last but not the least woodpecker.These
+                brands
+                have a long history of
+                patronization by socialites, celebrities and political figures and have been patronized by the likes of
+                Sir
+                Winston Churchill, The Beatles and Lady Gaga etc. The branded Premium glasses include a variety of
+                eyeglasses like full rim, half rim and
+                rimless glasses with alluring and sleek multi coloured frames. Designed with utmost care and precision,
+                these glasses are comfortable to wear and have all the features needed for making the perfect
+                eyeglasses.<br> The sizes offere dare variable
+                depending upon the frame size, eye size, bridge size and temple size while the frame style is standard.
+                Trendy and timeless, these eyeglasses are top in line and offer a variety of colour schemes. Long
+                lasting
+                and durable, these are not just
+                glasses they are the living exemplars of artistic perfection.<br>
+                <br>
+              <h4 style="font-size: 14px;color:gray;">Shop Premium Eyeglasses Online in India</h4>
+              <p style="font-size: 12px;color:gray;">
+                This Premium eyeglasses collection is available at Lenskart.com. All authentic premium eyeglasses from
+                all
+                the leading brands can be purchased from these web portals at very competitive market prices. These web
+                portals also provide discounts
+                on eyeglasses on some special occasions or at the end of seasons. Online shopping is more convenient
+                than
+                going about the shopping areas and spending your valuable time, browsing through the product lines of
+                different brands at different
+                brand stores.<br> Apart from that you may not be able to get a glimpse of the newly launched products at
+                your local stores because of logistical problems while as logistics is not a problem online and all the
+                newly launched products make their
+                appearance on the web before hitting the markets.<br>
+                <br>
+                Now, authentic premium eyeglasses from the biggest international brands can be purchased in India from
+                the
+                top web portals. These web portals allow easy and reliable modes of payment. So, to buy premium
+                eyeglasses
+                you don't have to
+                worry too much and go about looking for the stores.
+              </p>
+              </p>
+            </footer1>
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-sm-12">
+              <footer>
+                <div class="row">
+                  <footer style="background-color:  #150549;color:white;">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-sm-2">
+                          <h4>Services</h4>
+                          <br>
+                          <a href="">
+                            <li style="list-style-type: none;text-decoration:none;color: white;">Store Locator</li><br>
+                          </a>
+                          <a href="">
+                            <li style="list-style-type: none;text-decoration:none;color: white;">Buying Guide</li><br>
+                          </a>
+                          <a href="">
+                            <li style="list-style-type: none;text-decoration:none;color: white;">Frame Size</li>
+                          </a>
+      
+      
+                        </div>
+                        <div class="col-sm-2">
+                          <h4>About Us</h4>
+                          <br>
+                          <a href="">
+                            <li style="list-style-type: none;text-decoration:none;color: white;">We Are Hiring</li><br>
+                          </a>
+                          <a href="">
+                            <li style="list-style-type: none;text-decoration:none;color: white;">Refer and Earn</li><br>
+                          </a>
+                          <a href="">
+                            <li style="list-style-type: none;text-decoration:none;color: white;">About us</li><br>
+                          </a>
+                          <a href="">
+                            <li style="list-style-type: none;text-decoration:none;color: white;">Lenskart Coupons</li>
+                          </a>
+      
+                        </div>
+                        <div class="col-sm-2">
+                          <h4>Help</h4>
+                          <br>
+                          <a href="">
+                            <li style="list-style-type: none;text-decoration:none;color: white;">FAQ's</li><br>
+                          </a>
+      
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="text-center my-3">
+                            <button type="button" class="btn btn-light mx-3"><img src="270.png"
+                                style="height:50px;width:150px;"></button>
+                            <button type="button" class="btn btn-light mx-3"><img src="109.png"
+                                style="height:50px;width:150px;"></button>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <p1>Download Lenskart App to buy<br>Eyeglasses,Sunglasses and Contact Lenses</p1>
+                          </div>
+                        </div>
+      
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <a href="">
+                            <p3 style="list-style-type: none;text-decoration:none;color: white;">T & C</p3>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                          </a>
+                          <a href="">
+                            <p3 style="list-style-type: none;text-decoration:none;color: white;">Privacy</p3>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                          </a>
+                          <a href="">
+                            <p3 style="list-style-type: none;text-decoration:none;color: white;">Disclaimer</p3>
+                          </a>
+                        </div>
+                        <div class="col-sm-8">
+                          <div class="text-sm-end">
+                            <p4>Version1.0.0 || Follow Us </p4>
+                            <p5><a href=""><ion-icon name="logo-facebook"
+                                  style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a>&nbsp&nbsp&nbsp<a
+                                href=""><ion-icon name="logo-instagram"
+                                  style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a>&nbsp&nbsp&nbsp<a
+                                href=""><ion-icon name="logo-twitter"
+                                  style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a>&nbsp&nbsp&nbsp<a
+                                href=""><ion-icon name="mail-unread-outline"
+                                  style="font-size:25px;text-decoration:none;color: white;"></ion-icon></a></p5>
+                          </div>
+                        </div>
+      
+                      </div>
+      
+      
+                  </footer>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- second footer  -->
+
+  
+
+
+
+</body>
+
+</html>
